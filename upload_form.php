@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<head>
+  <title>Photo Uploader</title>
+</head>
+<body>
 <form method="post" action="processes.php" enctype="multipart/form-data">
   <input type="hidden" name="gallery_ID" value="<?php echo $_GET['gallery_ID']; ?>" />
   <table border="0" cellpadding="5" cellspacing="0">
@@ -7,3 +12,5 @@
     </tr>
   </table>
 </form>
+</body>
+</html>
