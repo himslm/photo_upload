@@ -10,7 +10,7 @@ if(isset($_GET['add_photos'])){
   $example->addPhotos($gallery_ID, $photo, $simpleImage);  
 }  
 
-class example{  
+class example extends cxn{  
   function addPhotos($gallery_ID, $photo, $simpleImage){  
     $count = count($_FILES['photo']['name']) - 1;  
     for($i = 0; $i <= $count; $i++){  
