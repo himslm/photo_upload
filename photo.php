@@ -9,7 +9,7 @@ class photo extends cxn{
 			
 			return $filename;
 		}
-    return null;
+    		return null;
 	}
 	function authFileExt($filename){
 		$allowed_ext = array('jpg', 'jpeg', 'png', 'gif');
