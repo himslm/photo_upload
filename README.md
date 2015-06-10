@@ -4,11 +4,13 @@ A Photo Upload Class with Resize Capabilities using SimpleImage.php
 To use in OOP format:
 Example:
 
+/*-----processes.php-----*/
 if(isset($_GET['add_photos'])){  
   $photo = new photo();  
   $simpleImage = new simpleImage();  
   $example->addPhotos($gallery_ID, $photo, $simpleImage);  
 }  
+/*-----processes.php-----*/
 
 class example extends cxn{  
   function addPhotos($gallery_ID, $photo, $simpleImage){  
