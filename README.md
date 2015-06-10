@@ -4,7 +4,7 @@ A Photo Upload Class with Resize Capabilities using SimpleImage.php
 To use in OOP format:
 Example:
 
-if(isset($_GET['add_photos'])){ \r\n
+if(isset($_GET['add_photos'])){
   $photo = new photo();
   $simpleImage = new simpleImage();
   $class->addPhotos($photo, $simpleImage);
