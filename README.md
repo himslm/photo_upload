@@ -7,7 +7,7 @@ Example:
 if(isset($_GET['add_photos'])){  
   $photo = new photo();  
   $simpleImage = new simpleImage();  
-  $class->addPhotos($gallery_ID, $photo, $simpleImage);  
+  $example->addPhotos($gallery_ID, $photo, $simpleImage);  
 }  
 
 class example{  
