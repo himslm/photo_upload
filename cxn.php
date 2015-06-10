@@ -4,7 +4,7 @@ class cxn{
   private $host = '';
   private $user = '';
   private $pass = '';
-  priavte $db = '';
+  private $db = '';
   
   function __construct(){
     $this->cxn = new mysqli($this->host, $this->user, $this->pass, $this->db);
