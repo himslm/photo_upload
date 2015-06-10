@@ -8,37 +8,31 @@ class photo extends cxn{
 			$this->resizeImage($filename, $simpleImage, $file_path, $max_side);
 			
 			return $filename;
-			
-		}else{
-			return null;
 		}
+    return null;
 	}
 	function authFileExt($filename){
 		$allowed_ext = array('jpg', 'jpeg', 'png', 'gif');
 		if(in_array($this->getFileExt($filename), $allowed_ext)){
 			return true;
-		}else{
-			$_SESSION['process_result'] = '<div class="notify-error fade">The file you tried uploading was not a supported file type: (jpg, jpeg, gif, png)</div>';
-			header("Location: " . $_SERVER['HTTP_REFERER']);
-			break;
 		}
+    $_SESSION['process_result'] = '<div class="notify-error fade">The file you tried uploading was not a supported file type: (jpg, jpeg, gif, png)</div>';
+    header("Location: " . $_SERVER['HTTP_REFERER']);
 	}
 	function getFileExt($filename){
 		$ext = explode(".", $filename);
 		$i = count($ext) - 1;
-		$ext = strtolower($ext[$i]);
-		return $ext;
+		return strtolower($ext[$i]);
 	}
 	function uploadFile($filename, $file_path, $tmpname){
 		move_uploaded_file($tmpname, $file_path . $filename);
 	}
 	function getImageSpecs($filename, $file_path){
 		$size = getimagesize($file_path . $filename);
-		$array = array(
+		return array(
 			'width' => $size[0],
 			'height' => $size[1]
 		);
-		return $array;
 	}
 	function resizeImage($filename, $simpleImage, $file_path, $max_side){
 		$size = $this->getImageSpecs($filename, $file_path);

@@ -11,8 +11,7 @@ class cxn{
   }
   
   function escape($value){
-    $value = $this->cxn->escape_string($value);
-    return value;
+    return $this->cxn->escape_string($value);
   }
 }
 ?>
