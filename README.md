@@ -4,6 +4,7 @@ A Photo Upload Class with Resize Capabilities using SimpleImage.php
 To use in OOP format:
 Example:
 
+```php
 /*-----processes.php-----*/
 if(isset($_GET['add_photos'])){  
   $photo = new photo();  
@@ -28,3 +29,4 @@ class example extends cxn{
   }  
 }  
 -------------------------------------------------------------------------------
+```
