@@ -1,3 +1,6 @@
+<?php
+include("includes/configuration.php");
+?>
 <!DOCTYPE html>
 <head>
   <title>Photo Uploader</title>
